@@ -6,3 +6,4 @@
 
 - 仓库：`CIWei178/ciwei`
 - 访问地址：`https://CIWei178.github.io/ciwei/`
+Cloudflare Pages：已连接 GitHub 自动部署。
