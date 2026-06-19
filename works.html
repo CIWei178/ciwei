@@ -360,10 +360,64 @@
 .work-hero{padding:78px 0 34px}.breadcrumb{display:inline-flex;gap:8px;align-items:center;color:var(--muted);font-size:14px;margin-bottom:22px}.work-board{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:24px}.feature-work{min-height:360px;padding:30px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(48,213,200,.09));box-shadow:var(--shadow);position:relative;overflow:hidden}.work-kicker{color:#c7d2ff;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}.feature-work h2{font-size:clamp(30px,4vw,52px);line-height:1.02;letter-spacing:-.05em;margin-bottom:18px}.feature-work p,.mini-work p,.process-card p,.case-body p{color:var(--muted)}.video-frame{margin-top:26px;aspect-ratio:16/9;border-radius:24px;border:1px solid rgba(255,255,255,.18);background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.035));display:grid;place-items:center;position:relative;overflow:hidden}.video-frame:before{content:"▶";width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:rgba(48,213,200,.16);border:1px solid rgba(48,213,200,.45);color:#72fff3;font-size:26px;padding-left:4px}.mini-stack{display:grid;gap:16px}.mini-work{padding:24px;border:1px solid var(--line);border-radius:28px;background:var(--card);min-height:172px}.mini-work h3{font-size:22px;margin-bottom:10px}.filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 18px}.filter-btn{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.06);cursor:pointer;font-weight:800}.filter-btn.active,.filter-btn:hover{color:var(--text);border-color:rgba(48,213,200,.5);background:rgba(48,213,200,.12)}.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.case-card{border:1px solid var(--line);border-radius:28px;background:var(--card);overflow:hidden;transition:transform .22s ease,background .22s ease,border-color .22s ease}.case-card:hover{transform:translateY(-5px);background:var(--card-strong);border-color:rgba(255,255,255,.28)}.case-thumb{aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(48,213,200,.12));border-bottom:1px solid var(--line);font-size:34px}.case-body{padding:22px}.case-body h3{font-size:20px;margin-bottom:10px}.case-body p{margin-bottom:16px}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}.process-card{padding:22px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.06)}.process-card:before{counter-increment:step;content:"0" counter(step);display:inline-grid;place-items:center;width:36px;height:36px;border-radius:12px;background:rgba(48,213,200,.13);color:#72fff3;font-weight:900;margin-bottom:18px}.empty-note{margin-top:18px;color:var(--muted);font-size:14px}@media(max-width:920px){.work-board,.case-grid,.process-grid{grid-template-columns:1fr}}
   
 @media (prefers-reduced-motion: reduce) { .btn.primary::before { animation: none; display:none; } }
+
+/* Human-refined layout pass: quieter contrast, editorial spacing, less generic card feel */
+:root { --bg:#080b12; --panel:#101520; --card:rgba(16,21,32,.72); --card-strong:rgba(22,29,43,.86); --line:rgba(213,224,255,.12); --text:#f2f5fb; --muted:#9da8b8; --accent:#6ee7d8; --accent-2:#8b7cff; }
+body { background: radial-gradient(circle at 72% 10%, rgba(110,231,216,.10), transparent 26rem), radial-gradient(circle at 8% 18%, rgba(139,124,255,.10), transparent 24rem), #080b12; }
+body::before { opacity:.22; background-size:72px 72px; }
+#shader-lines-canvas { opacity:.18; filter:saturate(.75) contrast(.9); }
+body::after { background:linear-gradient(180deg, rgba(8,11,18,.58), rgba(8,11,18,.92)); }
+.wrap { width:min(1120px, calc(100% - 48px)); }
+header { background:rgba(8,11,18,.72); border-bottom:1px solid rgba(255,255,255,.07); }
+nav { height:72px; }
+.brand { letter-spacing:-.02em; }
+.logo { background:#f2f5fb; color:#080b12; box-shadow:none; }
+.nav-links { gap:24px; }
+.hero { grid-template-columns:minmax(0,1.08fr) 380px; gap:70px; padding:112px 0 84px; align-items:center; }
+.eyebrow { color:#8fded8; background:transparent; border:0; padding:0; font-size:13px; letter-spacing:.12em; }
+h1 { font-size:clamp(54px,8vw,104px); line-height:.9; letter-spacing:-.075em; }
+.gradient-text { background:linear-gradient(180deg,#fff 0%,#d6dcff 58%,#7f8aa3 100%); -webkit-background-clip:text; background-clip:text; }
+.lead { max-width:700px; font-size:19px; line-height:1.9; color:#b4bdcb; }
+.actions { gap:12px; margin-top:34px; }
+.btn { border-radius:14px; min-height:46px; padding:0 17px; font-weight:750; box-shadow:none; }
+.btn.primary { background:#eef4ff; color:#080b12; }
+.btn.primary::after { background:#eef4ff; }
+.btn.primary:hover { background:#fff; }
+.profile-card { border-radius:30px; padding:26px; background:rgba(16,21,32,.76); border-color:rgba(255,255,255,.10); box-shadow:0 24px 70px rgba(0,0,0,.28); }
+.profile-card::before { display:none; }
+.avatar { border-radius:24px; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); box-shadow:none; }
+.stats { grid-template-columns:repeat(3,1fr); gap:10px; }
+.stat { border-radius:18px; background:rgba(255,255,255,.035); }
+section { padding:54px 0; }
+.section-title { font-size:clamp(34px,4.8vw,58px); letter-spacing:-.06em; margin-bottom:12px; }
+.section-subtitle { max-width:760px; color:#a7b1c0; line-height:1.85; }
+.grid { grid-template-columns:1.15fr .92fr .92fr; gap:14px; margin-top:28px; }
+.grid .card:nth-child(4) { grid-column:span 1; }
+.grid .card:nth-child(1) { min-height:232px; }
+.card, .project, .mini-work, .case-card, .process-card, .cap-card, .detail-card { border-radius:24px !important; background:rgba(16,21,32,.68) !important; border:1px solid rgba(213,224,255,.10) !important; box-shadow:none !important; backdrop-filter:none !important; }
+.card { padding:26px; min-height:190px; display:flex !important; flex-direction:column; justify-content:space-between; }
+.card:hover, .project:hover, .case-card:hover { transform:translateY(-3px); border-color:rgba(213,224,255,.20) !important; background:rgba(20,27,40,.82) !important; }
+.card .icon, .cap-icon, .case-thumb { filter:saturate(.82); }
+.card .icon { font-size:26px; margin-bottom:24px; }
+.card h3, .project h3, .mini-work h3, .case-body h3 { font-size:21px; letter-spacing:-.02em; }
+.card p, .project p, .mini-work p, .case-body p, .process-card p, .cap-card li { color:#a7b1c0 !important; line-height:1.75; }
+.projects { grid-template-columns:1fr 1fr; gap:14px; }
+.project { min-height:210px; }
+.tag { background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.10); color:#b9c2d0; }
+.contact-panel { border-radius:30px; padding:34px; background:linear-gradient(135deg, rgba(238,244,255,.08), rgba(110,231,216,.05)); box-shadow:none; }
+footer { border-top:1px solid rgba(255,255,255,.07); }
+.work-board, .cap-panel, .detail-grid { gap:14px !important; }
+.feature-work { border-radius:30px !important; background:rgba(16,21,32,.72) !important; box-shadow:none !important; }
+.feature-work::after { opacity:.35; }
+.case-grid { gap:14px !important; }
+.case-thumb { background:rgba(255,255,255,.045) !important; border-bottom:1px solid rgba(255,255,255,.08); }
+.process-grid { gap:14px !important; }
+@media(max-width:920px){ .hero,.grid,.projects,.work-board,.case-grid,.process-grid,.cap-panel,.detail-grid{grid-template-columns:1fr !important;} .wrap{width:min(100% - 32px,1120px)} .hero{gap:32px;padding:72px 0 46px} h1{font-size:clamp(48px,16vw,76px)} }
+
 </style>
 </head>
 <body>
-  <header><nav class="wrap"><a class="brand" href="index.html"><span class="logo">我</span><span>CIWei</span></a><div class="nav-links"><a href="index.html#about">关于我</a><a href="index.html#skills">能力</a><a href="works.html">作品</a><a href="index.html#contact">联系</a></div></nav></header>
+  <header><nav class="wrap"><a class="brand" href="index.html"><span class="logo">我</span><span>CIWei</span></a><div class="nav-links"><a href="about.html">关于我</a><a href="skills.html">能力</a><a href="works.html">作品</a><a href="contact.html">联系</a></div></nav></header>
   <main class="wrap">
     <section class="work-hero"><div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>作品矩阵</span></div><div class="eyebrow">🎬 CIWei Works</div><h1><span class="gradient-text">作品矩阵</span></h1><p class="lead">这里集中展示我的短视频拍摄、剪辑包装、账号运营和内容策划案例。当前先搭好作品展示结构，后续可以把真实视频链接、封面图、数据复盘继续补进来。</p><div class="actions"><a class="btn primary" href="#cases">浏览案例</a><a class="btn" href="index.html">返回首页</a></div></section>
     <section class="work-board"><article class="feature-work"><div class="work-kicker">Featured Case</div><h2>从选题到成片的一条龙内容制作</h2><p>适合放你的代表短视频项目：可以写明账号定位、拍摄场景、剪辑节奏、封面标题策略，以及最终内容目标。</p><div class="tag-row"><span class="tag">选题</span><span class="tag">拍摄</span><span class="tag">剪辑</span><span class="tag">发布</span></div><div class="video-frame"></div></article><div class="mini-stack"><article class="mini-work"><div class="work-kicker">Editing</div><h3>剪辑包装案例</h3><p>展示卡点、字幕、转场、调色、节奏优化等剪辑能力。</p><div class="tag-row"><span class="tag">节奏</span><span class="tag">字幕</span><span class="tag">包装</span></div></article><article class="mini-work"><div class="work-kicker">Operation</div><h3>账号运营案例</h3><p>展示账号定位、内容排期、标题封面、数据复盘和迭代方向。</p><div class="tag-row"><span class="tag">运营</span><span class="tag">数据</span><span class="tag">复盘</span></div></article></div></section>
@@ -376,7 +430,7 @@
       <article class="case-card" data-type="plan"><div class="case-thumb">📝</div><div class="case-body"><h3>短视频脚本模板</h3><p>把想表达的内容拆成开头、冲突、价值点和行动引导。</p><div class="tag-row"><span class="tag">脚本</span><span class="tag">结构</span></div></div></article>
     </div><p class="empty-note">提示：这些模块都可以替换为你的真实视频封面、播放链接、项目数据和合作品牌。</p></section>
     <section><h2 class="section-title">我的工作流程</h2><p class="section-subtitle">一个作品不是只靠剪辑完成，而是从选题判断开始，到拍摄执行、剪辑包装、发布复盘形成闭环。</p><div class="process-grid"><article class="process-card"><h3>确定方向</h3><p>分析账号定位、受众需求和内容目标。</p></article><article class="process-card"><h3>拍摄素材</h3><p>规划镜头、场景、光线和素材完整度。</p></article><article class="process-card"><h3>剪辑包装</h3><p>处理节奏、字幕、音乐、转场和封面。</p></article><article class="process-card"><h3>发布复盘</h3><p>根据数据反馈优化标题、封面和后续选题。</p></article></div></section>
-    <section id="contact"><div class="contact-panel"><div><h2 class="section-title">想看具体作品？</h2><p class="section-subtitle" style="margin-bottom:0">把你的视频链接、封面图片或项目资料发给我，我可以继续帮你整理成正式作品案例页。</p></div><a class="btn primary" href="index.html#contact">联系我</a></div></section>
+    <section id="contact"><div class="contact-panel"><div><h2 class="section-title">想看具体作品？</h2><p class="section-subtitle" style="margin-bottom:0">把你的视频链接、封面图片或项目资料发给我，我可以继续帮你整理成正式作品案例页。</p></div><a class="btn primary" href="contact.html">联系我</a></div></section>
   </main>
   <footer><div class="wrap">© <span id="year"></span> CIWei。作品矩阵。</div></footer>
   <script>document.getElementById("year").textContent=new Date().getFullYear();const buttons=document.querySelectorAll(".filter-btn");const cards=document.querySelectorAll(".case-card");buttons.forEach(btn=>btn.addEventListener("click",()=>{buttons.forEach(b=>b.classList.remove("active"));btn.classList.add("active");const f=btn.dataset.filter;cards.forEach(card=>{card.style.display=f==="all"||card.dataset.type===f?"":"none";});}));</script>
