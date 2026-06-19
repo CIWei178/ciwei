@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="TOPIC SCRIPT MAP">
+<defs>
+  <radialGradient id="r" cx="30%" cy="20%" r="80%"><stop offset="0" stop-color="#ff3df2" stop-opacity=".42"/><stop offset=".48" stop-color="#8b5cff" stop-opacity=".18"/><stop offset="1" stop-color="#020817" stop-opacity="1"/></radialGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3df2"/><stop offset="1" stop-color="#8b5cff"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="560" height="360" rx="34" fill="url(#r)"/>
+<path d="M0 90H560M0 180H560M0 270H560M90 0V360M180 0V360M270 0V360M360 0V360M450 0V360" stroke="white" stroke-opacity=".055"/>
+<path d="M34 34h92M34 34v70M526 326h-92M526 326v-70" stroke="url(#g)" stroke-width="2" opacity=".9"/>
+<g filter="url(#glow)"><path d="M150 105h230v150H150z" fill="rgba(255,255,255,.035)" stroke="#ff3df2" stroke-width="2"/><circle cx="184" cy="142" r="18" fill="#ff3df2" opacity=".32"/><circle cx="292" cy="178" r="22" fill="#8b5cff" opacity=".36"/><circle cx="378" cy="116" r="15" fill="#ff3df2" opacity=".42"/><path d="M184 142l108 36 86-62M184 142l-38 82h186" fill="none" stroke="#8b5cff" stroke-width="3" opacity=".9"/></g>
+<text x="36" y="302" fill="white" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="3">TOPIC</text>
+<text x="38" y="330" fill="#ff3df2" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="700" letter-spacing="4">SCRIPT MAP</text>
+<circle cx="492" cy="58" r="6" fill="#ff3df2"/><circle cx="514" cy="58" r="6" fill="#8b5cff"/><circle cx="470" cy="58" r="6" fill="white" opacity=".45"/>
+</svg>
