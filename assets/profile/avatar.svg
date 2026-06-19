@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs><radialGradient id="a" cx="50%" cy="30%" r="70%"><stop stop-color="#00eaff" stop-opacity=".45"/><stop offset=".48" stop-color="#8b5cff" stop-opacity=".28"/><stop offset="1" stop-color="#050914"/></radialGradient><linearGradient id="b" x1="0" x2="1"><stop stop-color="#00eaff"/><stop offset="1" stop-color="#ff3df2"/></linearGradient></defs>
+  <rect width="800" height="1000" rx="80" fill="#050914"/>
+  <rect x="24" y="24" width="752" height="952" rx="64" fill="url(#a)" stroke="url(#b)" stroke-width="3"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".12"> <path d="M80 180H720M80 320H720M80 460H720M80 600H720M80 740H720M160 80V920M320 80V920M480 80V920M640 80V920"/> </g>
+  <circle cx="400" cy="360" r="118" fill="rgba(255,255,255,.12)" stroke="url(#b)" stroke-width="5"/>
+  <path d="M190 760c36-142 126-218 210-218s174 76 210 218" fill="rgba(255,255,255,.10)" stroke="url(#b)" stroke-width="5"/>
+  <text x="400" y="880" text-anchor="middle" fill="#ecfbff" font-family="Arial,sans-serif" font-size="42" font-weight="900">CIWei</text>
+</svg>
