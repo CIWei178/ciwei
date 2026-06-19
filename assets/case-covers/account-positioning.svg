@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="POSITION BRAND RADAR">
+<defs>
+  <radialGradient id="r" cx="30%" cy="20%" r="80%"><stop offset="0" stop-color="#8b5cff" stop-opacity=".42"/><stop offset=".48" stop-color="#00ff9d" stop-opacity=".18"/><stop offset="1" stop-color="#020817" stop-opacity="1"/></radialGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cff"/><stop offset="1" stop-color="#00ff9d"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="560" height="360" rx="34" fill="url(#r)"/>
+<path d="M0 90H560M0 180H560M0 270H560M90 0V360M180 0V360M270 0V360M360 0V360M450 0V360" stroke="white" stroke-opacity=".055"/>
+<path d="M34 34h92M34 34v70M526 326h-92M526 326v-70" stroke="url(#g)" stroke-width="2" opacity=".9"/>
+<g filter="url(#glow)"><circle cx="286" cy="164" r="92" fill="none" stroke="#8b5cff" stroke-width="2" opacity=".8"/><circle cx="286" cy="164" r="52" fill="none" stroke="#00ff9d" stroke-width="2" opacity=".65"/><path d="M286 164l84-38" stroke="#8b5cff" stroke-width="4" stroke-linecap="round"/><path d="M286 72v184M194 164h184" stroke="white" stroke-width="1" opacity=".18"/><circle cx="370" cy="126" r="9" fill="#00ff9d"/></g>
+<text x="36" y="302" fill="white" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="3">POSITION</text>
+<text x="38" y="330" fill="#8b5cff" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="700" letter-spacing="4">BRAND RADAR</text>
+<circle cx="492" cy="58" r="6" fill="#8b5cff"/><circle cx="514" cy="58" r="6" fill="#00ff9d"/><circle cx="470" cy="58" r="6" fill="white" opacity=".45"/>
+</svg>
