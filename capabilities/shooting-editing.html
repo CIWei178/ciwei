@@ -357,4 +357,58 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
 
 @media (prefers-reduced-motion: reduce) { .btn.primary::before { animation: none; display:none; } }
 
-.cap-hero{padding:78px 0 34px}.breadcrumb{display:inline-flex;gap:8px;color:var(--muted);font-size:14px;margin-bottom:22px}.cap-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cap-card{padding:28px;border:1px solid var(--line);border-radius:30px;background:var(--card);backdrop-filter:blur(18px);box-shadow:var(--shadow)}.cap-icon{font-size:46px;margin-bottom:18px}.cap-card h2{font-size:28px;margin-bottom:16px}.cap-card li{color:var(--muted);margin:12px 0;line-height:1.8}.deliver-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.deliver-item{padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.055);color:#d8def4}.cap-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.cap-nav a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:#d8def4;background:rgba(255,255,255,.05)}.cap-nav a:hover{border-color:rgba(48,213,200,.55);background:rgba(48,213,200,.12);color:#fff}@media(max-width:820px){.cap-panel,.deliver-grid{grid-template-columns:1fr}}</style></head><body><canvas id="shader-lines-canvas" aria-hidden="true"></canvas><header><nav class="wrap"><a class="brand" href="../index.html"><span class="logo">我</span><span>CIWei</span></a><div class="nav-links"><a href="../index.html#about">关于我</a><a href="../index.html#skills">能力</a><a href="../works.html">作品</a><a href="../index.html#contact">联系</a></div></nav></header><main class="wrap"><section class="cap-hero"><div class="breadcrumb"><a href="../index.html">首页</a><span>/</span><span>拍摄剪辑</span></div><div class="eyebrow">CIWei Capability</div><h1><span class="gradient-text">拍摄剪辑</span></h1><p class="lead">拍摄剪辑把前期素材变成完整成片，重点是节奏、信息表达和视觉包装的统一。</p><div class="actions"><a class="btn primary" href="../index.html#skills">返回能力区</a><a class="btn" href="../index.html#contact">联系我</a></div></section><section class="cap-panel"><article class="cap-card"><div class="cap-icon">✂️</div><h2>拍摄剪辑怎么做</h2><ul><li>筛选素材并搭建视频结构</li><li>优化剪辑节奏、删除无效停顿和重复信息</li><li>添加字幕、音乐、音效、转场和基础调色</li><li>根据平台观看习惯调整前3秒和整体完播体验</li></ul></article><article class="cap-card"><h2>可以交付什么</h2><div class="deliver-grid"><div class="deliver-item">短视频成片</div><div class="deliver-item">口播剪辑</div><div class="deliver-item">字幕包装</div><div class="deliver-item">封面/标题配合建议</div></div><div class="cap-nav"><a href="content-planning.html">内容策划</a><a href="shooting-execution.html">拍摄执行</a><a href="operation-growth.html">运营增长</a><a href="topic-script.html">选题脚本</a><a href="shooting-editing.html">拍摄剪辑</a><a href="account-operation.html">账号运营</a></div></article></section></main><footer><div class="wrap">© <span id="year"></span> CIWei。拍摄剪辑。</div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+.cap-hero{padding:78px 0 34px}.breadcrumb{display:inline-flex;gap:8px;color:var(--muted);font-size:14px;margin-bottom:22px}.cap-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cap-card{padding:28px;border:1px solid var(--line);border-radius:30px;background:var(--card);backdrop-filter:blur(18px);box-shadow:var(--shadow)}.cap-icon{font-size:46px;margin-bottom:18px}.cap-card h2{font-size:28px;margin-bottom:16px}.cap-card li{color:var(--muted);margin:12px 0;line-height:1.8}.deliver-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.deliver-item{padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.055);color:#d8def4}.cap-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.cap-nav a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:#d8def4;background:rgba(255,255,255,.05)}.cap-nav a:hover{border-color:rgba(48,213,200,.55);background:rgba(48,213,200,.12);color:#fff}@media(max-width:820px){.cap-panel,.deliver-grid{grid-template-columns:1fr}}
+/* Human-refined layout pass: quieter contrast, editorial spacing, less generic card feel */
+:root { --bg:#080b12; --panel:#101520; --card:rgba(16,21,32,.72); --card-strong:rgba(22,29,43,.86); --line:rgba(213,224,255,.12); --text:#f2f5fb; --muted:#9da8b8; --accent:#6ee7d8; --accent-2:#8b7cff; }
+body { background: radial-gradient(circle at 72% 10%, rgba(110,231,216,.10), transparent 26rem), radial-gradient(circle at 8% 18%, rgba(139,124,255,.10), transparent 24rem), #080b12; }
+body::before { opacity:.22; background-size:72px 72px; }
+#shader-lines-canvas { opacity:.18; filter:saturate(.75) contrast(.9); }
+body::after { background:linear-gradient(180deg, rgba(8,11,18,.58), rgba(8,11,18,.92)); }
+.wrap { width:min(1120px, calc(100% - 48px)); }
+header { background:rgba(8,11,18,.72); border-bottom:1px solid rgba(255,255,255,.07); }
+nav { height:72px; }
+.brand { letter-spacing:-.02em; }
+.logo { background:#f2f5fb; color:#080b12; box-shadow:none; }
+.nav-links { gap:24px; }
+.hero { grid-template-columns:minmax(0,1.08fr) 380px; gap:70px; padding:112px 0 84px; align-items:center; }
+.eyebrow { color:#8fded8; background:transparent; border:0; padding:0; font-size:13px; letter-spacing:.12em; }
+h1 { font-size:clamp(54px,8vw,104px); line-height:.9; letter-spacing:-.075em; }
+.gradient-text { background:linear-gradient(180deg,#fff 0%,#d6dcff 58%,#7f8aa3 100%); -webkit-background-clip:text; background-clip:text; }
+.lead { max-width:700px; font-size:19px; line-height:1.9; color:#b4bdcb; }
+.actions { gap:12px; margin-top:34px; }
+.btn { border-radius:14px; min-height:46px; padding:0 17px; font-weight:750; box-shadow:none; }
+.btn.primary { background:#eef4ff; color:#080b12; }
+.btn.primary::after { background:#eef4ff; }
+.btn.primary:hover { background:#fff; }
+.profile-card { border-radius:30px; padding:26px; background:rgba(16,21,32,.76); border-color:rgba(255,255,255,.10); box-shadow:0 24px 70px rgba(0,0,0,.28); }
+.profile-card::before { display:none; }
+.avatar { border-radius:24px; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); box-shadow:none; }
+.stats { grid-template-columns:repeat(3,1fr); gap:10px; }
+.stat { border-radius:18px; background:rgba(255,255,255,.035); }
+section { padding:54px 0; }
+.section-title { font-size:clamp(34px,4.8vw,58px); letter-spacing:-.06em; margin-bottom:12px; }
+.section-subtitle { max-width:760px; color:#a7b1c0; line-height:1.85; }
+.grid { grid-template-columns:1.15fr .92fr .92fr; gap:14px; margin-top:28px; }
+.grid .card:nth-child(4) { grid-column:span 1; }
+.grid .card:nth-child(1) { min-height:232px; }
+.card, .project, .mini-work, .case-card, .process-card, .cap-card, .detail-card { border-radius:24px !important; background:rgba(16,21,32,.68) !important; border:1px solid rgba(213,224,255,.10) !important; box-shadow:none !important; backdrop-filter:none !important; }
+.card { padding:26px; min-height:190px; display:flex !important; flex-direction:column; justify-content:space-between; }
+.card:hover, .project:hover, .case-card:hover { transform:translateY(-3px); border-color:rgba(213,224,255,.20) !important; background:rgba(20,27,40,.82) !important; }
+.card .icon, .cap-icon, .case-thumb { filter:saturate(.82); }
+.card .icon { font-size:26px; margin-bottom:24px; }
+.card h3, .project h3, .mini-work h3, .case-body h3 { font-size:21px; letter-spacing:-.02em; }
+.card p, .project p, .mini-work p, .case-body p, .process-card p, .cap-card li { color:#a7b1c0 !important; line-height:1.75; }
+.projects { grid-template-columns:1fr 1fr; gap:14px; }
+.project { min-height:210px; }
+.tag { background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.10); color:#b9c2d0; }
+.contact-panel { border-radius:30px; padding:34px; background:linear-gradient(135deg, rgba(238,244,255,.08), rgba(110,231,216,.05)); box-shadow:none; }
+footer { border-top:1px solid rgba(255,255,255,.07); }
+.work-board, .cap-panel, .detail-grid { gap:14px !important; }
+.feature-work { border-radius:30px !important; background:rgba(16,21,32,.72) !important; box-shadow:none !important; }
+.feature-work::after { opacity:.35; }
+.case-grid { gap:14px !important; }
+.case-thumb { background:rgba(255,255,255,.045) !important; border-bottom:1px solid rgba(255,255,255,.08); }
+.process-grid { gap:14px !important; }
+@media(max-width:920px){ .hero,.grid,.projects,.work-board,.case-grid,.process-grid,.cap-panel,.detail-grid{grid-template-columns:1fr !important;} .wrap{width:min(100% - 32px,1120px)} .hero{gap:32px;padding:72px 0 46px} h1{font-size:clamp(48px,16vw,76px)} }
+
+</style></head><body><canvas id="shader-lines-canvas" aria-hidden="true"></canvas><header><nav class="wrap"><a class="brand" href="../index.html"><span class="logo">我</span><span>CIWei</span></a><div class="nav-links"><a href="../index.html#about">关于我</a><a href="../index.html#skills">能力</a><a href="../works.html">作品</a><a href="../index.html#contact">联系</a></div></nav></header><main class="wrap"><section class="cap-hero"><div class="breadcrumb"><a href="../index.html">首页</a><span>/</span><span>拍摄剪辑</span></div><div class="eyebrow">CIWei Capability</div><h1><span class="gradient-text">拍摄剪辑</span></h1><p class="lead">拍摄剪辑把前期素材变成完整成片，重点是节奏、信息表达和视觉包装的统一。</p><div class="actions"><a class="btn primary" href="../index.html#skills">返回能力区</a><a class="btn" href="../index.html#contact">联系我</a></div></section><section class="cap-panel"><article class="cap-card"><div class="cap-icon">✂️</div><h2>拍摄剪辑怎么做</h2><ul><li>筛选素材并搭建视频结构</li><li>优化剪辑节奏、删除无效停顿和重复信息</li><li>添加字幕、音乐、音效、转场和基础调色</li><li>根据平台观看习惯调整前3秒和整体完播体验</li></ul></article><article class="cap-card"><h2>可以交付什么</h2><div class="deliver-grid"><div class="deliver-item">短视频成片</div><div class="deliver-item">口播剪辑</div><div class="deliver-item">字幕包装</div><div class="deliver-item">封面/标题配合建议</div></div><div class="cap-nav"><a href="content-planning.html">内容策划</a><a href="shooting-execution.html">拍摄执行</a><a href="operation-growth.html">运营增长</a><a href="topic-script.html">选题脚本</a><a href="shooting-editing.html">拍摄剪辑</a><a href="account-operation.html">账号运营</a></div></article></section></main><footer><div class="wrap">© <span id="year"></span> CIWei。拍摄剪辑。</div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
