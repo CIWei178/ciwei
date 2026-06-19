@@ -99,7 +99,10 @@
     }
 
     .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.14); }
-    .btn.primary { border: 0; background: linear-gradient(135deg, var(--accent), #9d7bff); }
+    .btn.primary { border: 0; background: linear-gradient(135deg, var(--accent), #9d7bff); position: relative; overflow: hidden; isolation: isolate; }
+    .btn.primary::before { content:""; position:absolute; inset:-2px; transform: translateX(-130%) skewX(-18deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), rgba(255,255,255,.72), rgba(255,255,255,.18), transparent); animation: shiny-sweep 3.2s cubic-bezier(.22,1,.36,1) infinite; z-index:-1; }
+    .btn.primary::after { content:""; position:absolute; inset:1px; border-radius:inherit; background: linear-gradient(135deg, rgba(48,213,200,.86), rgba(157,123,255,.92)); z-index:-2; }
+    @keyframes shiny-sweep { 0%, 35% { transform: translateX(-130%) skewX(-18deg); opacity: 0; } 45% { opacity: 1; } 72%, 100% { transform: translateX(130%) skewX(-18deg); opacity: 0; } }
     .btn.primary:hover { background: linear-gradient(135deg, #8d72ff, #b092ff); }
 
     .hero {
@@ -360,6 +363,8 @@
 body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(circle at 20% 18%, rgba(124,92,255,.26), transparent 34rem), radial-gradient(circle at 82% 10%, rgba(48,213,200,.16), transparent 30rem), linear-gradient(135deg, rgba(9,13,26,.72), rgba(11,16,32,.84) 54%, rgba(5,8,18,.96)); }
 @media (prefers-reduced-motion: reduce) { #shader-lines-canvas { display:none; } }
 
+
+@media (prefers-reduced-motion: reduce) { .btn.primary::before { animation: none; display:none; } }
 </style>
 </head>
 <body>
