@@ -366,6 +366,8 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
 
 
 @media (prefers-reduced-motion: reduce) { .btn.primary::before { animation: none; display:none; } }
+.card-link { text-decoration:none; color:inherit; display:block; cursor:pointer; }
+.card-link:focus-visible { outline:2px solid rgba(48,213,200,.8); outline-offset:4px; }
 </style>
 </head>
 <body>
@@ -424,9 +426,9 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
       <h2 class="section-title">关于我</h2>
       <p class="section-subtitle">我是 CIWei，一名短视频运营拍剪师。我的工作覆盖内容选题、脚本思路、拍摄执行、剪辑包装和发布运营，目标是让每条视频都更清晰、更吸引人。</p>
       <div class="grid">
-        <article class="card"><div class="icon">🎯</div><h3>内容策划</h3><p>根据账号定位和受众需求，提炼选题、卖点和视频表达方向。</p></article>
-        <article class="card"><div class="icon">🎥</div><h3>拍摄执行</h3><p>关注画面、节奏、场景和素材完整度，让后期剪辑更顺畅。</p></article>
-        <article class="card"><div class="icon">🚀</div><h3>运营增长</h3><p>围绕发布节奏、数据反馈和内容迭代，持续提升视频表现。</p></article>
+        <a class="card card-link" href="capabilities/content-planning.html"><div class="icon">🎯</div><h3>内容策划</h3><p>根据账号定位和受众需求，提炼选题、卖点和视频表达方向。</p></a>
+        <a class="card card-link" href="capabilities/shooting-execution.html"><div class="icon">🎥</div><h3>拍摄执行</h3><p>关注画面、节奏、场景和素材完整度，让后期剪辑更顺畅。</p></a>
+        <a class="card card-link" href="capabilities/operation-growth.html"><div class="icon">🚀</div><h3>运营增长</h3><p>围绕发布节奏、数据反馈和内容迭代，持续提升视频表现。</p></a>
       </div>
     </section>
 
@@ -434,9 +436,9 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
       <h2 class="section-title">内容生产系统</h2>
       <p class="section-subtitle">下面是我在短视频内容制作与账号运营中的主要能力。</p>
       <div class="grid">
-        <article class="card"><div class="icon">💡</div><h3>选题脚本</h3><p>把品牌诉求或个人表达转化为适合短视频传播的内容结构。</p></article>
-        <article class="card"><div class="icon">✂️</div><h3>拍摄剪辑</h3><p>完成素材拍摄、节奏剪辑、字幕包装、音乐卡点和基础调色。</p></article>
-        <article class="card"><div class="icon">📈</div><h3>账号运营</h3><p>结合数据表现优化标题、封面、发布时间和后续内容方向。</p></article>
+        <a class="card card-link" href="capabilities/topic-script.html"><div class="icon">💡</div><h3>选题脚本</h3><p>把品牌诉求或个人表达转化为适合短视频传播的内容结构。</p></a>
+        <a class="card card-link" href="capabilities/shooting-editing.html"><div class="icon">✂️</div><h3>拍摄剪辑</h3><p>完成素材拍摄、节奏剪辑、字幕包装、音乐卡点和基础调色。</p></a>
+        <a class="card card-link" href="capabilities/account-operation.html"><div class="icon">📈</div><h3>账号运营</h3><p>结合数据表现优化标题、封面、发布时间和后续内容方向。</p></a>
       </div>
     </section>
 
@@ -446,11 +448,11 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
       <div class="projects">
         <article class="project">
           <div><h3>作品一：短视频拍剪案例</h3><p>展示从脚本思路、拍摄执行到剪辑包装的完整内容制作流程。</p></div>
-          <div class="tag-row"><a class="tag" href="tags/shooting.html">拍摄</a><a class="tag" href="tags/editing.html">剪辑</a><a class="tag" href="tags/packaging.html">包装</a></div>
+          <div class="tag-row"><span class="tag">拍摄</span><span class="tag">剪辑</span><span class="tag">包装</span></div>
         </article>
         <article class="project">
           <div><h3>作品二：账号运营案例</h3><p>展示账号定位、内容规划、发布节奏和数据复盘的运营成果。</p></div>
-          <div class="tag-row"><a class="tag" href="tags/operation.html">运营</a><a class="tag" href="tags/data.html">数据</a><a class="tag" href="tags/growth.html">增长</a></div>
+          <div class="tag-row"><span class="tag">运营</span><span class="tag">数据</span><span class="tag">增长</span></div>
         </article>
       </div>
     </section>
