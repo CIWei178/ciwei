@@ -422,6 +422,20 @@ footer { border-top:1px solid rgba(255,255,255,.07); }
 .process-grid { gap:14px !important; }
 @media(max-width:920px){ .hero,.grid,.projects,.work-board,.case-grid,.process-grid,.cap-panel,.detail-grid{grid-template-columns:1fr !important;} .wrap{width:min(100% - 32px,1120px)} .hero{gap:32px;padding:72px 0 46px} h1{font-size:clamp(48px,16vw,76px)} }
 
+
+.workflow-section { display:grid; grid-template-columns:.78fr 1.22fr; gap:42px; align-items:start; padding:72px 0; border-top:1px solid rgba(255,255,255,.07); border-bottom:1px solid rgba(255,255,255,.07); }
+.workflow-copy { position:sticky; top:96px; }
+.workflow-list { display:grid; gap:0; border-top:1px solid rgba(255,255,255,.12); }
+.workflow-item { display:grid; grid-template-columns:64px 1fr 38px; gap:18px; align-items:center; padding:26px 0; border-bottom:1px solid rgba(255,255,255,.12); color:inherit; text-decoration:none; }
+.workflow-index { color:#6ee7d8; font-family:JetBrains Mono, ui-monospace, monospace; font-size:13px; letter-spacing:.08em; }
+.workflow-main { display:grid; gap:8px; }
+.workflow-main strong { font-size:22px; letter-spacing:-.03em; font-weight:850; color:#f2f5fb; }
+.workflow-main em { font-style:normal; color:#9da8b8; line-height:1.75; }
+.workflow-arrow { width:38px; height:38px; display:grid; place-items:center; border-radius:999px; border:1px solid rgba(255,255,255,.16); color:#f2f5fb; transition:transform .2s ease, background .2s ease; }
+.workflow-item:hover .workflow-arrow { transform:translateX(4px); background:rgba(238,244,255,.10); }
+.workflow-item:hover .workflow-main strong { color:#fff; }
+@media(max-width:920px){ .workflow-section{grid-template-columns:1fr; gap:24px; padding:50px 0;} .workflow-copy{position:static;} .workflow-item{grid-template-columns:44px 1fr 32px; gap:12px;} .workflow-main strong{font-size:19px;} }
+
 </style>
 </head>
 <body>
@@ -491,21 +505,27 @@ footer { border-top:1px solid rgba(255,255,255,.07); }
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title">合作方式</h2>
-      <p class="section-subtitle">如果你正在做短视频账号，可以从一次成片、一组内容方案，或长期账号陪跑开始。这里不放空泛介绍，只保留最常用的合作入口。</p>
-      <div class="projects">
-        <a class="project card-link" href="contact.html">
-          <div><h3>单条视频制作</h3><p>适合已经有素材或明确主题的需求：整理脚本、剪辑成片、优化字幕节奏和基础包装。</p></div>
-          <div class="tag-row"><span class="tag">剪辑</span><span class="tag">字幕</span><span class="tag">成片</span></div>
+    <section id="projects" class="workflow-section">
+      <div class="workflow-copy">
+        <div class="eyebrow">Work with me</div>
+        <h2 class="section-title">从哪里开始合作</h2>
+        <p class="section-subtitle">不做堆满卡片的介绍，这里按真实沟通顺序整理：先判断你现在卡在哪一步，再进入对应页面。</p>
+      </div>
+      <div class="workflow-list" aria-label="合作入口">
+        <a class="workflow-item" href="contact.html">
+          <span class="workflow-index">01</span>
+          <span class="workflow-main"><strong>我已经有素材，想先做出一条成片</strong><em>进入联系页，把素材情况、成片风格和发布时间发给我。</em></span>
+          <span class="workflow-arrow">→</span>
         </a>
-        <a class="project card-link" href="skills.html">
-          <div><h3>内容方案整理</h3><p>适合还没想清楚怎么拍的账号：一起梳理定位、选题、脚本结构和发布节奏。</p></div>
-          <div class="tag-row"><span class="tag">选题</span><span class="tag">脚本</span><span class="tag">排期</span></div>
+        <a class="workflow-item" href="skills.html">
+          <span class="workflow-index">02</span>
+          <span class="workflow-main"><strong>我有账号方向，但不知道怎么持续更新</strong><em>查看能力页，先梳理选题、脚本、拍摄和发布流程。</em></span>
+          <span class="workflow-arrow">→</span>
         </a>
-        <a class="project card-link" href="works.html">
-          <div><h3>账号内容陪跑</h3><p>适合想持续更新的账号：围绕数据反馈复盘内容表现，调整下一轮标题、封面和方向。</p></div>
-          <div class="tag-row"><span class="tag">运营</span><span class="tag">复盘</span><span class="tag">增长</span></div>
+        <a class="workflow-item" href="works.html">
+          <span class="workflow-index">03</span>
+          <span class="workflow-main"><strong>我想先看看作品页和内容结构</strong><em>进入作品页，查看案例分类、内容生产流程和后续作品展示位置。</em></span>
+          <span class="workflow-arrow">→</span>
         </a>
       </div>
     </section>
