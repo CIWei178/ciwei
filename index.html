@@ -4,17 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CIWei｜短视频运营拍剪师</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <meta name="description" content="CIWei 的个人网站，展示短视频运营、拍摄剪辑与内容作品。" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #0b1020;
+      --bg: #05070d;
       --card: rgba(255, 255, 255, 0.08);
       --card-strong: rgba(255, 255, 255, 0.14);
       --text: #eef3ff;
       --muted: #aab6d3;
-      --accent: #7c5cff;
-      --accent-2: #30d5c8;
+      --accent: #43f3ff;
+      --accent-2: #7c6dff;
       --line: rgba(255, 255, 255, 0.16);
       --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
     }
@@ -22,12 +25,13 @@
     html { scroll-behavior: smooth; }
     body {
       min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 15% 20%, rgba(124, 92, 255, 0.38), transparent 32rem),
-        radial-gradient(circle at 85% 12%, rgba(48, 213, 200, 0.22), transparent 30rem),
-        linear-gradient(135deg, #090d1a 0%, var(--bg) 52%, #111832 100%);
+        radial-gradient(circle at 12% 10%, rgba(124, 109, 255, 0.40), transparent 30rem),
+        radial-gradient(circle at 86% 8%, rgba(67, 243, 255, 0.26), transparent 28rem),
+        radial-gradient(circle at 50% 90%, rgba(32, 230, 166, 0.12), transparent 34rem),
+        linear-gradient(135deg, #030409 0%, var(--bg) 52%, #07101f 100%);
       line-height: 1.6;
     }
 
@@ -342,7 +346,16 @@
       .stats { grid-template-columns: 1fr; }
       .hero { padding-top: 54px; }
     }
-  </style>
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px, transparent 1px); background-size:54px 54px; mask-image:radial-gradient(circle at 50% 20%, black, transparent 72%); opacity:.58; z-index:-1; }
+.profile-card, .card, .project, .contact-panel { backdrop-filter: blur(18px); }
+.profile-card { background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.045)); }
+.profile-card::before { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg, transparent, rgba(67,243,255,.10), transparent); transform:translateX(-120%); animation:scan 6s ease-in-out infinite; }
+@keyframes scan { 0%,45%{transform:translateX(-120%)} 70%,100%{transform:translateX(120%)} }
+.card, .project { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035)); }
+.card:hover, .project:hover { border-color: rgba(67,243,255,.32); box-shadow: 0 24px 70px rgba(67,243,255,.08); }
+.logo, .avatar { box-shadow: 0 0 40px rgba(67,243,255,.20), 0 18px 40px rgba(0,0,0,.28); }
+.eyebrow, .tag { font-family: JetBrains Mono, ui-monospace, monospace; letter-spacing:.04em; }
+</style>
 </head>
 <body>
   <header>
@@ -354,7 +367,7 @@
       <div class="nav-links" aria-label="主导航">
         <a href="#about">关于我</a>
         <a href="#skills">能力</a>
-        <a href="#projects">作品</a>
+        <a href="works.html">作品</a>
         <a href="#contact">联系</a>
       </div>
     </nav>
@@ -363,12 +376,12 @@
   <main id="top" class="wrap">
     <section class="hero">
       <div>
-        <div class="eyebrow">✨ 短视频运营 · 拍摄 · 剪辑</div>
+        <div class="eyebrow">● CONTENT SYSTEM / SHOOT / EDIT</div>
         <h1><span class="gradient-text">CIWei</span></h1>
-        <p class="lead">我是一名短视频运营拍剪师，擅长从选题策划、现场拍摄到后期剪辑，把内容做得更有节奏、更容易被看见。</p>
+        <p class="lead">短视频运营拍剪师。把选题、拍摄、剪辑、发布和复盘串成一条完整内容流水线，让画面更有质感，让节奏更抓人，让账号更容易被看见。</p>
         <div class="actions">
-          <a class="btn primary" href="#projects">查看作品</a>
-          <button class="btn" id="copyEmail" type="button">复制邮箱</button>
+          <a class="btn primary" href="works.html">查看作品矩阵</a>
+          <button class="btn" id="copyEmail" type="button">复制联系邮箱</button>
         </div>
       </div>
 
@@ -386,7 +399,7 @@
         </div>
         <div class="status"><span class="dot"></span> 正在制作更有传播力的内容</div>
         <h2>CIWei</h2>
-        <p>短视频运营拍剪师，专注内容策划、视频拍摄、剪辑包装与账号运营。</p>
+        <p>短视频运营拍剪师，专注内容策划、视频拍摄、剪辑包装与账号运营，用更清晰的内容结构提升短视频完成度。</p>
         <div class="stats">
           <div class="stat"><strong>3+</strong><span>核心能力</span></div>
           <div class="stat"><strong>6</strong><span>作品案例</span></div>
@@ -406,7 +419,7 @@
     </section>
 
     <section id="skills">
-      <h2 class="section-title">我能做什么</h2>
+      <h2 class="section-title">内容生产系统</h2>
       <p class="section-subtitle">下面是我在短视频内容制作与账号运营中的主要能力。</p>
       <div class="grid">
         <article class="card"><div class="icon">💡</div><h3>选题脚本</h3><p>把品牌诉求或个人表达转化为适合短视频传播的内容结构。</p></article>
@@ -416,7 +429,7 @@
     </section>
 
     <section id="projects">
-      <h2 class="section-title">精选作品</h2>
+      <h2 class="section-title">作品矩阵</h2>
       <p class="section-subtitle">这里可以放你的短视频案例、拍摄花絮、剪辑前后对比或账号运营成果。</p>
       <div class="projects">
         <article class="project">
@@ -433,7 +446,7 @@
     <section id="contact">
       <div class="contact-panel">
         <div>
-          <h2 class="section-title">我们保持联系</h2>
+          <h2 class="section-title">一起做更有传播力的视频</h2>
           <p class="section-subtitle" style="margin-bottom:0">如果你需要短视频策划、拍摄、剪辑或账号运营支持，可以在这里联系我。</p>
         </div>
         <a class="btn primary" href="mailto:hello@example.com">hello@example.com</a>
