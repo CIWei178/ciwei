@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="SCRIPT FRAMEWORK">
+<defs>
+  <radialGradient id="r" cx="30%" cy="20%" r="80%"><stop offset="0" stop-color="#ff355e" stop-opacity=".42"/><stop offset=".48" stop-color="#ffb300" stop-opacity=".18"/><stop offset="1" stop-color="#020817" stop-opacity="1"/></radialGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff355e"/><stop offset="1" stop-color="#ffb300"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="560" height="360" rx="34" fill="url(#r)"/>
+<path d="M0 90H560M0 180H560M0 270H560M90 0V360M180 0V360M270 0V360M360 0V360M450 0V360" stroke="white" stroke-opacity=".055"/>
+<path d="M34 34h92M34 34v70M526 326h-92M526 326v-70" stroke="url(#g)" stroke-width="2" opacity=".9"/>
+<g filter="url(#glow)"><rect x="126" y="82" width="300" height="178" rx="24" fill="rgba(255,255,255,.04)" stroke="#ff355e" stroke-width="2"/><path d="M162 130h228M162 172h176M162 214h212" stroke="#ffb300" stroke-width="5" stroke-linecap="round" opacity=".75"/><path d="M126 118h300M206 82v178" stroke="white" stroke-width="1" opacity=".14"/></g>
+<text x="36" y="302" fill="white" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="3">SCRIPT</text>
+<text x="38" y="330" fill="#ff355e" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="700" letter-spacing="4">FRAMEWORK</text>
+<circle cx="492" cy="58" r="6" fill="#ff355e"/><circle cx="514" cy="58" r="6" fill="#ffb300"/><circle cx="470" cy="58" r="6" fill="white" opacity=".45"/>
+</svg>
