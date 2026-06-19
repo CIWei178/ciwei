@@ -310,7 +310,8 @@
     }
 
     .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .tag { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; color: #d8def4; font-size: 12px; }
+    .tag { display:inline-flex; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; color: #d8def4; font-size: 12px; text-decoration:none; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .tag:hover { transform: translateY(-2px); background: rgba(48,213,200,.12); border-color: rgba(48,213,200,.5); color:#fff; }
 
     .contact-panel {
       display: grid;
@@ -445,11 +446,11 @@ body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
       <div class="projects">
         <article class="project">
           <div><h3>作品一：短视频拍剪案例</h3><p>展示从脚本思路、拍摄执行到剪辑包装的完整内容制作流程。</p></div>
-          <div class="tag-row"><span class="tag">拍摄</span><span class="tag">剪辑</span><span class="tag">包装</span></div>
+          <div class="tag-row"><a class="tag" href="tags/shooting.html">拍摄</a><a class="tag" href="tags/editing.html">剪辑</a><a class="tag" href="tags/packaging.html">包装</a></div>
         </article>
         <article class="project">
           <div><h3>作品二：账号运营案例</h3><p>展示账号定位、内容规划、发布节奏和数据复盘的运营成果。</p></div>
-          <div class="tag-row"><span class="tag">运营</span><span class="tag">数据</span><span class="tag">增长</span></div>
+          <div class="tag-row"><a class="tag" href="tags/operation.html">运营</a><a class="tag" href="tags/data.html">数据</a><a class="tag" href="tags/growth.html">增长</a></div>
         </article>
       </div>
     </section>
