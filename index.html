@@ -482,6 +482,7 @@ body:has(title),.cap-icon{--icon-color:#38f8ff}.cap-icon:has(#g-shoot){--icon-co
 .replace-photo-btn:hover{border-color:rgba(0,234,255,.72);transform:translateY(-1px);box-shadow:0 0 30px rgba(0,234,255,.32),0 0 54px rgba(139,92,255,.18)}
 .case-thumb,.detail-cover,.flow-visual,.avatar{position:relative}
 .avatar .replace-photo-btn{right:10px;bottom:10px}
+
 </style>
 </head>
 <body>
@@ -511,14 +512,11 @@ body:has(title),.cap-icon{--icon-color:#38f8ff}.cap-icon:has(#g-shoot){--icon-co
       <aside class="profile-card" aria-label="个人信息卡片">
         <div class="avatar" id="avatarPreview" aria-label="证件照预览">
           <span>证件照<br>位置</span>
-          <img id="avatarImage" alt="CIWei 的证件照" /><a class="replace-photo-btn" href="admin.html?target=avatar">替换图片</a>
+          <img id="avatarImage" alt="CIWei 的证件照" />
         </div>
-        <div class="avatar-tools">
-          <label class="file-label">
-            上传证件照
-            <input id="avatarInput" type="file" accept="image/*" />
-          </label>
-          <button class="text-button" id="resetAvatar" type="button">移除照片</button>
+        <div class="avatar-tools" id="avatarTools">
+          <a class="ghost-button" href="admin.html?target=avatar">上传证件照</a>
+          <a class="text-button" href="admin.html?target=avatar">移除照片</a>
         </div>
         <div class="status"><span class="dot"></span> 正在制作更有传播力的内容</div>
         <h2>CIWei</h2>
@@ -598,8 +596,6 @@ body:has(title),.cap-icon{--icon-color:#38f8ff}.cap-icon:has(#g-shoot){--icon-co
     const toast = document.getElementById('toast');
     const avatarPreview = document.getElementById('avatarPreview');
     const avatarImage = document.getElementById('avatarImage');
-    const avatarInput = document.getElementById('avatarInput');
-    const resetAvatar = document.getElementById('resetAvatar');
 
     function setAvatar(src) {
       if (!src) return;
@@ -613,21 +609,6 @@ body:has(title),.cap-icon{--icon-color:#38f8ff}.cap-icon:has(#g-shoot){--icon-co
     const savedAvatar = localStorage.getItem('ciweiIdPhoto');
     if (savedAvatar) setAvatar(savedAvatar);
     else setAvatar('assets/profile/avatar.svg');
-
-    avatarInput.addEventListener('change', () => {
-      const file = avatarInput.files && avatarInput.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = event => setAvatar(event.target.result);
-      reader.readAsDataURL(file);
-    });
-
-    resetAvatar.addEventListener('click', () => {
-      localStorage.removeItem('ciweiIdPhoto');
-      avatarImage.removeAttribute('src');
-      avatarPreview.classList.remove('has-image');
-      avatarInput.value = '';
-    });
 
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('copyEmail').addEventListener('click', async () => {
